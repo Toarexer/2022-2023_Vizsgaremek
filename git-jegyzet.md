@@ -10,7 +10,7 @@ Egy projekt lokálisan és központi szerveren (Distributed Version Control) is 
 ### Mi a branch?
 A brach egy ágazati rendszer, mely egy adott projekt több verzióját teszi lehetővé szimultáns egyidőben.
 
-###Branch parancsok
+### Branch parancsok
 Jelenlegi branch: `git branch`\
 Új branch: `git branch pelda-pranch` / `git checkout -b pelda-pranch`\
 Branch törlése: `git branch -d pelda-pranch`\
