@@ -3,7 +3,7 @@
 A Git egy verzió követő rendszer ami a fájlokban történő módosításokat tárolja, így ezek a változtatások visszakövethetőek és visszaállíthatóak.\
 
 ## Hogyan működik a Git?
-Mindenkinek saját könyvtárat is tárol lokálisan és nem csak a központi szerveren (Distributed Version Control). Ennek köszönhetően nincs szükség állandó kapcsolatra a szerverrel.
+Egy projekt lokálisan és központi szerveren (Distributed Version Control) is tárolja az adatokat. Ennek köszönhetően nincs szükség állandó kapcsolatra a szerverrel.
 
 ## Branch
 
