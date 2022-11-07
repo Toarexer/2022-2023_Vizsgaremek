@@ -6,6 +6,8 @@ A Git egy verzió követő rendszer ami a fájlokban történő módosításokat
 ### Hogyan működik a Git?
 Egy projekt lokálisan és központi szerveren (Distributed Version Control) is tárolja az adatokat. Ennek köszönhetően nincs szükség állandó kapcsolatra a szerverrel.
 
+### Git parancs
+A git parancsa: `git`
 ## Branch
 ### Mi a branch?
 A brach egy ágazati rendszer, mely egy adott projekt több verzióját teszi lehetővé szimultáns egyidőben.
