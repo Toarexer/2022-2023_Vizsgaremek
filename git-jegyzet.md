@@ -1,8 +1,8 @@
 # Git
-## Mi a Git?
+### Mi a Git?
 A Git egy verzió követő rendszer ami a fájlokban történő módosításokat tárolja, így ezek a változtatások visszakövethetőek és visszaállíthatóak.\
 
-## Hogyan működik a Git?
+### Hogyan működik a Git?
 Egy projekt lokálisan és központi szerveren (Distributed Version Control) is tárolja az adatokat. Ennek köszönhetően nincs szükség állandó kapcsolatra a szerverrel.
 
 ## Branch
