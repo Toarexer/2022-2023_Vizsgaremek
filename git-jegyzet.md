@@ -1,13 +1,20 @@
 # Git
 ## Bevezető
 ### Mi a Git?
-A Git egy verzió követő rendszer ami a fájlokban történő módosításokat tárolja, így ezek a változtatások visszakövethetőek és visszaállíthatóak.\
+A Git egy verzió követő rendszer ami a fájlokban történő módosításokat tárolja, így ezek a változtatások visszakövethetőek és visszaállíthatóak.
 
 ### Hogyan működik a Git?
 Egy projekt lokálisan és központi szerveren (Distributed Version Control) is tárolja az adatokat. Ennek köszönhetően nincs szükség állandó kapcsolatra a szerverrel.
+> A git parancsa a `git`
 
-### Git parancs
-A git parancsa: `git`
+### Általános használat
+Egy könyvtárat lemásolhatunk a `git clone` parancsal vagy létrehozhatunk egy újat a `git init` parancsal.\
+Miután létrhoztuk/módosítottuk a fájlokat `git add .` parancsal minden megváltozott fájlt a színpadra tudunk helyezni.\
+A `git commit` parancs a színpadon lévó módosításokat *commit*-eli a helyi könyvtárba.\
+Miután végeztunk, a helyi módosítások feltölthetőek a fő könyvtárba a `git push` parancsal.\
+Ezeket a módosításokat a `git pull` parancsal tudják mások letölteni a helyi könyvtárukba.
+> A távoli könyvtárat a `git remote` utasítással lehtet kezelni.
+
 ## Branch
 ### Mi a branch?
 A brach egy ágazati rendszer, mely egy adott projekt több verzióját teszi lehetővé szimultáns egyidőben.
