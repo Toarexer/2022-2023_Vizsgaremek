@@ -6,8 +6,8 @@ A Git egy verzió követő rendszer ami a fájlokban történő módosításokat
 Egy projekt lokálisan és központi szerveren (Distributed Version Control) is tárolja az adatokat. Ennek köszönhetően nincs szükség állandó kapcsolatra a szerverrel.
 
 ## Branch
-
-A branch-ekkel el lehtet különíteni és egyszerre több verziót is lehet tárolni.
+### Mi a branch?
+A brach egy ágazati rendszer, mely egy adott projekt több verzióját teszi lehetővé szimultáns egyidőben.
 
 Jelenlegi branch: `git branch`\
 Új branch: `git branch pelda-pranch` / `git checkout -b pelda-pranch`\
