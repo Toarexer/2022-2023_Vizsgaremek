@@ -8,11 +8,11 @@ Egy projekt lokálisan és központi szerveren (Distributed Version Control) is 
 > A git parancsa a `git`
 
 ### Általános használat
-Egy könyvtárat lemásolhatunk a `git clone` parancsal vagy létrehozhatunk egy újat a `git init` parancsal.\
-Miután létrhoztuk/módosítottuk a fájlokat `git add .` parancsal minden megváltozott fájlt a színpadra tudunk helyezni.\
+Egy könyvtárat lemásolhatunk a `git clone` parancsal vagy létrehozhatunk egy újat a `git init` paranccsal.\
+Miután létrhoztuk/módosítottuk a fájlokat `git add .` paranccsal minden megváltozott fájlt a színpadra tudunk helyezni.\
 A `git commit` parancs a színpadon lévó módosításokat *commit*-eli a helyi könyvtárba.\
-Miután végeztunk, a helyi módosítások feltölthetőek a fő könyvtárba a `git push` parancsal.\
-Ezeket a módosításokat a `git pull` parancsal tudják mások letölteni a helyi könyvtárukba.
+Miután végeztünk, a helyi módosítások feltölthetőek a fő könyvtárba a `git push` paranccsal.\
+Ezeket a módosításokat a `git pull` paranccsal tudják mások letölteni a helyi könyvtárukba.
 > A távoli könyvtárat a `git remote` utasítással lehtet kezelni.
 
 ## Branch
