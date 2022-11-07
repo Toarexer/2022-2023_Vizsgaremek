@@ -1,4 +1,5 @@
 # Git
+## Bevezető
 ### Mi a Git?
 A Git egy verzió követő rendszer ami a fájlokban történő módosításokat tárolja, így ezek a változtatások visszakövethetőek és visszaállíthatóak.\
 
