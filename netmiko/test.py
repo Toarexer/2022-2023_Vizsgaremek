@@ -20,16 +20,6 @@ def readpass(key: str):
     cipher = AES.new(pad(key.encode(), AES.block_size), AES.MODE_CBC, iv)
     return unpad(cipher.decrypt(ct), AES.block_size).decode()
 
-
-def writepass(key: str, sshpass: str):
-    cipher = AES.new(pad(key.encode(), AES.block_size), AES.MODE_CBC)
-    bytes = cipher.encrypt(pad(sshpass.encode(), AES.block_size))
-    iv = b64encode(cipher.iv).decode("utf-8")
-    ct = b64encode(bytes).decode("utf-8")
-    with open("pass.txt", "w") as f:
-        f.writelines([iv, '\n', ct])
-
-
 with open("ips.txt", "r") as f:
     iplist = [x.removesuffix("\n") for x in f.readlines()]
 
@@ -40,9 +30,6 @@ with open("hash.txt", "r") as f:
         sys.exit(1)
 
 sshpass = readpass(key)
-newsshpass = sha256(str(randint(0, 0xFFFFFFFF)).encode()).hexdigest()[:16]
-print("new passord: " + newsshpass)
-writepass(key, newsshpass)
 
 for ip in iplist:
     args = {
@@ -50,20 +37,11 @@ for ip in iplist:
         "ip": ip,
         "username": "user",
         "password": sshpass,
-        "secret": "enable",
     }
-
-    commands = [
-        "username user secret " + newsshpass,
-        "do write"
-    ]
 
     print("trying " + ip)
     try:
-        nc = ConnectHandler(**args)
-        nc.enable()
-        nc.send_config_set(commands)
-        nc.disconnect()
-        print("successfully set password for " + ip)
+        ConnectHandler(**args).disconnect()
+        print("successfully connected to " + ip)
     except:
-        print("failed to set password for " + ip, file=sys.stderr)
+        print("failed to connect to " + ip, file=sys.stderr)
