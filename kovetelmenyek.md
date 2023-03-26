@@ -6,26 +6,26 @@ Elvárás, hogy a fejlesztési folyamat során **legalább 3 alkalommal konzult�
 Ezen feltételek teljesítése, a határidőkre való odafigyelés a **tanuló/képzésben résztvevő felelőssége!**
 
 ## A vizsgaremeknek az alábbi elvárásoknak kell megfelelni:
-* a hálózati infrastruktúrának legalább 3 telephelyet vagy irodát kell lefednie
-* legalább egy telephelyen több VLAN kialakítását foglalja magában
-* tartalmaz második és harmadik rétegbeli redundáns megoldásokat
-* IPv4 és IPv6 címzési rendszert egyaránt használ
-* Vezeték nélküli hálózatot is tartalmaz
-* statikus és dinamikus forgalomirányítást egyaránt megvalósít
-* statikus és dinamikus címfordítást alkalmaz
-* WAN-összeköttetéseket is tartalmaz
-* virtuális magánhálózati kapcsolatot (VPN) is megvalósít
-* programozott hálózatkonfigurációt is használ
-* forgalomirányítón megvalósított biztonsági funkciókat tartalmaz (pl. ACL-ek)
-* hardveres tűzfaleszközt is alkalmaz
-* Minimum 1-1 Linux és Windows kiszolgálót tartalmaz, melyek legalább az alábbi szolgáltatásokat nyújtják:
-	* Címtár (pl. Active Directory)
-	* DHCP
-	* DNS
-	* HTTP/HTTPS
-	* Fájl- és nyomtató megosztás
-	* Automatizált mentés
-	* Kliens számítógépekre automatizált szoftvertelepítés
+- [x] a hálózati infrastruktúrának legalább 3 telephelyet vagy irodát kell lefednie
+- [x] legalább egy telephelyen több VLAN kialakítását foglalja magában
+- [x] tartalmaz második és harmadik rétegbeli redundáns megoldásokat
+- [ ] IPv4 és IPv6 címzési rendszert egyaránt használ
+- [x] Vezeték nélküli hálózatot is tartalmaz
+- [x] statikus és dinamikus forgalomirányítást egyaránt megvalósít
+- [ ] statikus és dinamikus címfordítást alkalmaz
+- [x] WAN-összeköttetéseket is tartalmaz
+- [ ] virtuális magánhálózati kapcsolatot (VPN) is megvalósít
+- [x] programozott hálózatkonfigurációt is használ
+- [ ] forgalomirányítón megvalósított biztonsági funkciókat tartalmaz (pl. ACL-ek)
+- [ ] hardveres tűzfaleszközt is alkalmaz
+#### Minimum 1-1 Linux és Windows kiszolgálót tartalmaz, melyek legalább az alábbi szolgáltatásokat nyújtják:
+- [x] Címtár (pl. Active Directory)
+- [x] DHCP
+- [x] DNS
+- [x] HTTP/HTTPS
+- [ ] Fájl- és nyomtató megosztás
+- [x] Automatizált mentés
+- [ ] Kliens számítógépekre automatizált szoftvertelepítés
 
 ## A vizsgaremek benyújtásának módja:
 A projekt teljes anyagát **elektronikus formában a vizsga előtt minimum 14 nappal** kell a vizsgabizottsághoz benyújtani. A benyújtott anyagnak tartalmaznia kell az alábbiakat:
