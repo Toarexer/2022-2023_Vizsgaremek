@@ -13,20 +13,20 @@ from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad, unpad
 
 
-def readpass(key: str):
-    with open("pass.txt", "r") as f:
+def readpass(path: str, key: str):
+    with open(path, "r") as f:
         iv = b64decode(f.readline().removesuffix("\n"))
         ct = b64decode(f.readline().removesuffix("\n"))
     cipher = AES.new(pad(key.encode(), AES.block_size), AES.MODE_CBC, iv)
     return unpad(cipher.decrypt(ct), AES.block_size).decode()
 
 
-def writepass(key: str, sshpass: str):
+def writepass(path: str, key: str, sshpass: str):
     cipher = AES.new(pad(key.encode(), AES.block_size), AES.MODE_CBC)
     bytes = cipher.encrypt(pad(sshpass.encode(), AES.block_size))
     iv = b64encode(cipher.iv).decode("utf-8")
     ct = b64encode(bytes).decode("utf-8")
-    with open("pass.txt", "w") as f:
+    with open(path, "w") as f:
         f.writelines([iv, '\n', ct])
 
 
@@ -36,13 +36,15 @@ with open("ips.txt", "r") as f:
 key = getpass()
 with open("hash.txt", "r") as f:
     if sha256(key.encode()).hexdigest() != f.readline().removesuffix("\n"):
-        print("wrong pasword!", file=sys.stderr)
+        print("Wrong password!", file=sys.stderr)
         sys.exit(1)
 
-sshpass = readpass(key)
+sshpass = readpass("pass.txt", key)
+enapass = readpass("enable.txt", key)
+
 newsshpass = sha256(str(randint(0, 0xFFFFFFFF)).encode()).hexdigest()[:16]
-print("new passord: " + newsshpass)
-writepass(key, newsshpass)
+print("New passord: " + newsshpass)
+writepass("pass.txt", key, newsshpass)
 
 for ip in iplist:
     args = {
@@ -50,7 +52,7 @@ for ip in iplist:
         "ip": ip,
         "username": "user",
         "password": sshpass,
-        "secret": "enable",
+        "secret": enapass,
     }
 
     commands = [
@@ -58,12 +60,12 @@ for ip in iplist:
         "do write"
     ]
 
-    print("trying " + ip)
+    print("Trying " + ip)
     try:
         nc = ConnectHandler(**args)
         nc.enable()
         nc.send_config_set(commands)
         nc.disconnect()
-        print("successfully set password for " + ip)
+        print("Successfully set password for " + ip)
     except:
-        print("failed to set password for " + ip, file=sys.stderr)
+        print("Failed to set password for " + ip, file=sys.stderr)

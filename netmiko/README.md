@@ -35,6 +35,6 @@ Az AES titkosításhoz használt kulcs hash-ét tárolja és csak ellenőrzére 
 ### ips.txt
 Soronként egy IP címet tartalmaz, ezekre a címekre próbál a program kapcsolódni SSH-n keresztül.
 
-### pass.txt
+### enable.txt és pass.txt
 A fájl első sora az AES titkosítás feloldásához szükséges base64 kódolású initialization vector-t tárolja.\
 A második sor magát a titkosított jelszót tárolja base64-el kódolva.
