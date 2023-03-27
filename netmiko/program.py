@@ -33,17 +33,17 @@ def writepass(path: str, key: str, sshpass: str):
 with open("ips.txt", "r") as f:
     iplist = [x.removesuffix("\n") for x in f.readlines()]
 
-key = getpass()
+key = getpass(prompt="Encryption key: ")
 with open("hash.txt", "r") as f:
     if sha256(key.encode()).hexdigest() != f.readline().removesuffix("\n"):
-        print("Wrong password!", file=sys.stderr)
+        print("Wrong AES key!", file=sys.stderr)
         sys.exit(1)
 
 sshpass = readpass("pass.txt", key)
 enapass = readpass("enable.txt", key)
 
 newsshpass = sha256(str(randint(0, 0xFFFFFFFF)).encode()).hexdigest()[:16]
-print("New passord: " + newsshpass)
+print("New password: " + newsshpass)
 writepass("pass.txt", key, newsshpass)
 
 for ip in iplist:
