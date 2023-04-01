@@ -42,7 +42,7 @@ with open("hash.txt", "r") as f:
 sshpass = readpass("pass.txt", key)
 enapass = readpass("enable.txt", key)
 
-newsshpass = sha256(str(randint(0, 0xFFFFFFFF)).encode()).hexdigest()[:16]
+newsshpass = "pass" #sha256(str(randint(0, 0xFFFFFFFF)).encode()).hexdigest()[:16]
 print("New password: " + newsshpass)
 writepass("pass.txt", key, newsshpass)
 
