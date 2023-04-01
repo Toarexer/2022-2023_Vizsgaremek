@@ -67,7 +67,7 @@ for host in hosts:
     newpass = sha256(str(randint(0, 0xFFFFFFFF)).encode()).hexdigest()[:16]
 
     commands = [
-        "username user secret " + newpass,
+        "username " + host["user"] + " secret " + newpass,
         "do write"
     ]
 
@@ -75,10 +75,10 @@ for host in hosts:
     try:
         nc = ConnectHandler(**args)
         nc.enable()
-        # nc.send_config_set(commands)
+        nc.send_config_set(commands)
         nc.disconnect()
         print("Successfully set password for " + host["ip"])
-        # host["pass"] = newpass
+        host["pass"] = newpass
         host["success"] = True
     except:
         print("Failed to set password for " + host["ip"], file=sys.stderr)
