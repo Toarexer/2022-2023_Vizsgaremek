@@ -17,6 +17,10 @@ Az SSH felhsználó neve.
 - `"pass"`\
 Az SSH felhsználó jelszava.
 - `"secret"`\
-Az eszküz enable leszava.
+Az eszköz enable leszava.
 - `"success"`\
 Sikeres volt-e a legutóbbi jelszó csere.
+
+### Anacron
+
+> TODO

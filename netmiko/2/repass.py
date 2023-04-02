@@ -73,10 +73,9 @@ for host in hosts:
 
     print("Trying " + host["ip"])
     try:
-        nc = ConnectHandler(**args)
-        nc.enable()
-        nc.send_config_set(commands)
-        nc.disconnect()
+        with ConnectHandler(**args) as nc:
+            nc.enable()
+            nc.send_config_set(commands)
         print("Successfully set password for " + host["ip"])
         host["pass"] = newpass
         host["success"] = True
