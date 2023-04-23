@@ -1,4 +1,5 @@
 # Informatikai rendszer- és alkalmazás-üzemeltető technikus vizsgaremek vizsgarész
+## Május 7-re!
 
 A vizsgázóknak minimum 2, maximum 3 fős informatikai rendszer- és alkalmazás-üzemeltető csapatot alkotva kell a vizsgát megelőzően egy komplex informatikai rendszerfejlesztési projektet megvalósítaniuk. A projekt egy valós vagy elképzelt vállalat hálózatának tervezését, a hálózat egy működő prototípusának gyakorlati kivitelezését, valamint a prototípus működésének tesztelését foglalja magában. (Lehetőleg valós eszközön.)\
 A vizsgaremeknek a vizsgázók saját, önálló szellemi termékének kell lennie. A felhasznált eszközökre, dokumentumokra megfelelően kell hivatkozni a dokumentációban.\
@@ -12,7 +13,7 @@ Ezen feltételek teljesítése, a határidőkre való odafigyelés a **tanuló/k
 - [ ] IPv4 és IPv6 címzési rendszert egyaránt használ
 - [x] Vezeték nélküli hálózatot is tartalmaz
 - [x] statikus és dinamikus forgalomirányítást egyaránt megvalósít
-- [ ] statikus és dinamikus címfordítást alkalmaz
+- [x] statikus és dinamikus címfordítást alkalmaz
 - [x] WAN-összeköttetéseket is tartalmaz
 - [ ] virtuális magánhálózati kapcsolatot (VPN) is megvalósít
 - [x] programozott hálózatkonfigurációt is használ
