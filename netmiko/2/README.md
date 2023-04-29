@@ -7,6 +7,8 @@
 4. Fellép az eszközökre és lecseréli az SSH jeszót az újra, majd menti a konfigurációt.
 5. A jelenlegi **hosts.csv**-t átnevezi **hosts.prev.csv**-re és kiírja a frissített adatokat egy új **hosts.csv** fájlba.
 
+![code flowchart](.src/repass.svg)
+
 ### Hosts CSV fájl
 
 A fájl a következő adatokat tárolja `;`-vel elválasztva:
