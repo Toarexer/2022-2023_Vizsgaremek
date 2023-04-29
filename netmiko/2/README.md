@@ -7,22 +7,23 @@
 4. Fellép az eszközökre és lecseréli az SSH jeszót az újra, majd menti a konfigurációt.
 5. A jelenlegi **hosts.csv**-t átnevezi **hosts.prev.csv**-re és kiírja a frissített adatokat egy új **hosts.csv** fájlba.
 
-![code flowchart](.src/repass.svg)
-
 ### Hosts CSV fájl
-
 A fájl a következő adatokat tárolja `;`-vel elválasztva:
 - `"host"`\
-Az eszköz IP címe.
+Eszköz IP címe.
+- `"port"`\
+SSH port száma.
 - `"user"`\
-Az SSH felhsználó neve.
+SSH felhsználó neve.
 - `"pass"`\
-Az SSH felhsználó jelszava.
+SSH felhsználó jelszava.
 - `"secret"`\
 Az eszköz enable leszava.
 - `"success"`\
 Sikeres volt-e a legutóbbi jelszó csere.
 
 ### Anacron
+A program havi rendszerességgel fut az anacron segítségével.
 
-> TODO
+### Folyamatábra
+![code flowchart](.src/repass.svg)
