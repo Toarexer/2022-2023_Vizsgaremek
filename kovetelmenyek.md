@@ -24,7 +24,7 @@ Ezen feltételek teljesítése, a határidőkre való odafigyelés a **tanuló/k
 - [x] DHCP
 - [x] DNS
 - [x] HTTP/HTTPS
-- [ ] Fájl- és nyomtató megosztás
+- [x] Fájl- és nyomtató megosztás
 - [x] Automatizált mentés
 - [ ] Kliens számítógépekre automatizált szoftvertelepítés
 
