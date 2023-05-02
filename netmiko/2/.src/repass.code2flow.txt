@@ -1,0 +1,36 @@
+if !Létezik-e a "hosts.csv"? {
+  "hosts.csv" létehozása;
+}
+if !Létezik-e az "errors.csv"? {
+  "errors.csv" létehozása;
+}
+
+for "hosts.csv" beolvasása; Van még sor?; Következő sor
+{
+  if Hibás a sor? {
+    Sor kiírása az "errors.csv"-be;
+  } else {
+    Sorból kiolvasott adatok tömbe helyezése;
+  }
+}
+
+for Tömb szűrése;
+    Van még tömb elem?;
+    Következő elem {
+      if  Szkript argumentumok száma 1?
+          vagy
+          Szkript argumentumok tartalmazzák az IP címet? {
+        Új jelszó generálása.;
+        Régi jeszló segítségével feljelentkezés az eszközre.;
+        if Sikeres bejelentkezés? {
+          Jelszó lecserélése az újra.;
+          Az eszközhöz tartozó "Siker" átállítása igazra;
+        } else {
+          Az eszközhöz tartozó "Siker" átállítása hamisra;
+        }
+      }
+}
+
+Új adatok kiírása a "hosts.csv" fájba;
+"hosts.csv" átnevezése "hosts.prev.csv"-re;
+Kilépés

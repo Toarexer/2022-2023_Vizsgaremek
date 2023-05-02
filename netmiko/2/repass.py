@@ -2,8 +2,8 @@
 
 from hashlib import sha256
 from netmiko import ConnectHandler
-from os import rename
-from os.path import exists
+from os import chdir, rename
+from os.path import dirname, exists
 from random import randint
 import sys
 
@@ -44,6 +44,8 @@ def writecsv(path: str, hosts: list):
                   sep=";", file=f)
 
 
+chdir(dirname(__file__))
+
 csvfile = "hosts.csv"
 errfile = "errors.txt"
 
@@ -54,7 +56,7 @@ if not exists(errfile):
 
 hosts = readcsv(csvfile, errfile)
 
-for host in hosts:
+for host in filter(lambda h: (len(sys.argv) == 1) or (h["ip"] in sys.argv[1:]), hosts):
     args = {
         "device_type": "cisco_ios",
         "ip": host["ip"],
