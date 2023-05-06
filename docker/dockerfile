@@ -1,0 +1,15 @@
+FROM debian:stable
+RUN apt update
+RUN apt upgrade -y
+RUN apt install nginx php7.4 php7.4-fpm wget wordpress -y
+
+COPY 'nginx.conf' '/etc/nginx/nginx.conf'
+
+RUN wget 'https://wordpress.org/latest.tar.gz' -O '/root/wp.tar.gz'
+RUN tar -xf '/root/wp.tar.gz' -C '/var/www/'
+COPY 'wp-config.php' '/var/www/wordpress/wp-config.php'
+COPY 'wordpress.crt' '/var/www/wordpress/wordpress.crt'
+COPY 'wordpress.key' '/var/www/wordpress/wordpress.key'
+RUN chown -R www-data:www-data '/var/www/wordpress/'
+
+RUN ln -sf '/usr/share/zoneinfo/Europe/Budapest' '/etc/localtime'

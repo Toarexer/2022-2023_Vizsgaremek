@@ -1,0 +1,32 @@
+version: '3.1'
+services:
+
+  mariadb:
+    image: mariadb
+    restart: always
+    environment:
+      MYSQL_DATABASE: wpdb
+      MYSQL_USER: dbuser
+      MYSQL_PASSWORD: dbpass
+      MYSQL_ROOT_PASSWORD: dbroot
+    volumes:
+      - mariadb:/var/lib/mysql
+
+  nginx:
+    build:
+      dockerfile: dockerfile
+    command: bash -c 'service php7.4-fpm start && service nginx start && sleep infinity'
+    restart: always
+    ports:
+      - 80:80
+      - 443:443
+    depends_on:
+      - mariadb
+    links:
+      - mariadb
+    volumes:
+      - nginx:/var/www/wordpress
+
+volumes:
+  mariadb:
+  nginx:
