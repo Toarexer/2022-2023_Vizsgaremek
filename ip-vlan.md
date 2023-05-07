@@ -13,7 +13,7 @@
 
 |Name|Internal IP|Translated IP|
 |:---|:---|:---|
-|Linux Server|192.168.10.9/24||
-|Win Server|192.168.10.22/24||
-|Exchange Server|192.168.10.19/24||
-|Kertész Web Server|192.168.0.10/24|12.0.0.12/30|
+|Linux Server|192.168.10.9||
+|Win Server|192.168.10.22||
+|Exchange Server|192.168.10.19||
+|Kertész Web Server|192.168.10.12|12.0.0.12|
