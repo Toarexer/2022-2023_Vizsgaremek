@@ -10,7 +10,7 @@ Ezen feltételek teljesítése, a határidőkre való odafigyelés a **tanuló/k
 - [x] a hálózati infrastruktúrának legalább 3 telephelyet vagy irodát kell lefednie
 - [x] legalább egy telephelyen több VLAN kialakítását foglalja magában
 - [x] tartalmaz második és harmadik rétegbeli redundáns megoldásokat
-- [ ] IPv4 és IPv6 címzési rendszert egyaránt használ
+- [x] IPv4 és IPv6 címzési rendszert egyaránt használ
 - [x] Vezeték nélküli hálózatot is tartalmaz
 - [x] statikus és dinamikus forgalomirányítást egyaránt megvalósít
 - [x] statikus és dinamikus címfordítást alkalmaz
@@ -18,7 +18,7 @@ Ezen feltételek teljesítése, a határidőkre való odafigyelés a **tanuló/k
 - [ ] virtuális magánhálózati kapcsolatot (VPN) is megvalósít
 - [x] programozott hálózatkonfigurációt is használ
 - [ ] forgalomirányítón megvalósított biztonsági funkciókat tartalmaz (pl. ACL-ek)
-- [ ] hardveres tűzfaleszközt is alkalmaz
+- [x] hardveres tűzfaleszközt is alkalmaz
 #### Minimum 1-1 Linux és Windows kiszolgálót tartalmaz, melyek legalább az alábbi szolgáltatásokat nyújtják:
 - [x] Címtár (pl. Active Directory)
 - [x] DHCP
@@ -26,7 +26,7 @@ Ezen feltételek teljesítése, a határidőkre való odafigyelés a **tanuló/k
 - [x] HTTP/HTTPS
 - [x] Fájl- és nyomtató megosztás
 - [x] Automatizált mentés
-- [ ] Kliens számítógépekre automatizált szoftvertelepítés
+- [x] Kliens számítógépekre automatizált szoftvertelepítés
 
 ## A vizsgaremek benyújtásának módja:
 A projekt teljes anyagát **elektronikus formában a vizsga előtt minimum 14 nappal** kell a vizsgabizottsághoz benyújtani. A benyújtott anyagnak tartalmaznia kell az alábbiakat:
