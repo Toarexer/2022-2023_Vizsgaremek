@@ -11,8 +11,9 @@
 
 # Devices
 
-|Name|NIC 1|Mask|
+|Name|Internal IP|Translated IP|
 |:---|:---|:---|
-|linux-server|192.168.10.10|255.255.255.0|
-|windows-server2022|192.168.10.22|255.255.255.0|
-|windows-server2019|192.168.10.19|255.255.255.0|
+|Linux Server|192.168.10.9/24||
+|Win Server|192.168.10.22/24||
+|Exchange Server|192.168.10.19/24||
+|Kertész Web Server|192.168.0.10/24|12.0.0.12/30|
